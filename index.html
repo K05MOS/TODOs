@@ -13,4 +13,54 @@
   </div>
 </div>
 </body>
+<script>
+  var toggleCheck = function(){
+    // Create a variable to refer the to-do list, that is, the parent node of the checkbox
+    // Use the classList property to toggle the class checked, for example, varName.classList.toggle('checked')
+  };
+
+  var deleteTodo = function(){
+    // Create a variable to refer the to-do list, that is, the parent node of the delete button
+    // Remove the list item using the .remove() function, for example, varName.remove()
+  };
+
+  var addTodo = function(todo) {
+    let li = document.createElement('li');
+
+    let label = document.createElement('label');
+    label.innerHTML = todo;
+
+    let checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    // Write code to trigger the toggleCheck function once the checkbox is clicked
+
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "Delete";
+    deleteButton.className = "delete";
+    // Write code to trigger the deleteTodo function once the delete button is clicked
+
+    // Nest todo elements in list item
+    li.appendChild(checkbox);
+    li.appendChild(label);
+    li.appendChild(deleteButton);
+
+    // Write code to append todo element in list with "todoList" id
+  };
+
+  document.getElementById('add').onclick = function() {
+    // Store the button's parent element (.addTodo <div>) in a variable
+    var parent = this.parentNode;
+    // Store the input, which is the first child element of the .addTodo <div>
+    var addTextInput = parent.children[0];
+    // Make sure that the input's value is not empty in the following if condition
+    if() {
+      return;
+    } else {
+      // Add todo
+
+      // Reset input 
+      addTextInput.value = "";
+    }
+  };
+</script>
 </html>
